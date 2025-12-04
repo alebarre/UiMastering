@@ -1,11 +1,10 @@
-import { StyleSheet } from 'react-native';
-import ContactUsScreen from './src/screens/ContactUsScreen';
+import { StatusBar } from 'expo-status-bar';
+import { StyleSheet, Text, View } from 'react-native';
 import IntroScreen from './src/screens/IntroScreen';
 
 export default function App() {
   return (
-    //<IntroScreen />
-    <ContactUsScreen />
+    <IntroScreen />
   );
 }
 
@@ -14,6 +13,6 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: '#fff',
     alignItems: 'center',
-    justifyContent: 'center', 
+    justifyContent: 'center',
   },
 });
