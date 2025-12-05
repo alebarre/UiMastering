@@ -2,6 +2,7 @@ import React from "react";
 import { StyleSheet, View, Text } from "react-native";
 import { vs, s } from "react-native-size-matters";
 import TopTabs from "../components/TopTabs";
+import MeditationCard from "../components/MeditationCard";
 
 const HomeScreen = () => {
   return (
@@ -11,6 +12,7 @@ const HomeScreen = () => {
         Lorem ipsum dolor sit amet consectetur.{" "}
       </Text>
       <TopTabs />
+      <MeditationCard />
     </View>
   );
 };

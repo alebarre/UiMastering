@@ -2,11 +2,11 @@ import React, { useState } from "react";
 import { StyleSheet, View, Text, TouchableOpacity } from "react-native";
 import { s } from "react-native-size-matters";
 
-const tabsArray = ["Live", "Recorded"];
-
 const ACTIVE_BG = "#75563B";
 const ACTIVE_TEXT = "#FFFFFF";
 const INACTIVE_TEXT = "#2C2016";
+
+const tabsArray = ["Live", "Recorded"];
 
 const TopTabs = () => {
   const [activeTab, setActiveTab] = useState("Live");
@@ -14,6 +14,7 @@ const TopTabs = () => {
     <View style={styles.container}>
       {tabsArray.map((tab) => {
         const isActive = activeTab === tab;
+        console;
         return (
           <TouchableOpacity
             onPress={() => setActiveTab(tab)}
