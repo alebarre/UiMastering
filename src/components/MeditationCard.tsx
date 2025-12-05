@@ -4,17 +4,25 @@ import { VideoIcon } from "../assets/icons";
 
 import {
   StyleSheet,
-  TouchableOpacity,
   Text,
   View,
   ImageBackground,
+  Dimensions,
 } from "react-native";
 
-const MeditationCard = () => {
+const PhoneWidth = Dimensions.get("window").width;
+const cardWitdh = (PhoneWidth - s(14) * 3) / 2;
+interface MeditationCardProps {
+  imageURL: string;
+  title: string;
+  date: string;
+}
+
+const MeditationCard = ({ imageURL, title, date }: MeditationCardProps) => {
   return (
     <ImageBackground
       source={{
-        uri: "https://fthmb.tqn.com/zdGKApD6j7UdTo-KMN_t4aEEGtA=/5118x3416/filters:fill(87E3EF,1)/meditation-Compassionate-Eye-Foundation-Taxi-Getty-Images-56a906d13df78cf772a2f03b.jpg",
+        uri: imageURL,
       }}
       style={styles.imgContainer}
       imageStyle={styles.image}
@@ -24,10 +32,10 @@ const MeditationCard = () => {
         <Text style={styles.badgeText}>Live</Text>
       </View>
       <View style={styles.cardContent}>
-        <Text style={styles.cardTitle}>Meditations</Text>
+        <Text style={styles.cardTitle}>{title}</Text>
         <View style={{ flexDirection: "row", alignItems: "center" }}>
           <VideoIcon />
-          <Text style={styles.dateText}>31st Jan - 09:00</Text>
+          <Text style={styles.dateText}>{date}</Text>
         </View>
       </View>
     </ImageBackground>
@@ -36,8 +44,8 @@ const MeditationCard = () => {
 
 const styles = StyleSheet.create({
   imgContainer: {
-    height: s(161),
-    width: s(166),
+    height: s(150),
+    width: cardWitdh,
     borderRadius: s(11),
     overflow: "hidden",
   },
