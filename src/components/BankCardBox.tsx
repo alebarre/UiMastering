@@ -28,8 +28,7 @@ const styles = StyleSheet.create({
     marginTop: vs(25),
     justifyContent: "center",
     alignItems: "center",
-    paddingVertical: vs(35),
-    paddingHorizontal: s(30),
+    paddingVertical: vs(15),
   },
 
   bankCardText1: {
