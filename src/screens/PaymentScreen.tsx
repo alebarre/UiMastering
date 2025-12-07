@@ -3,6 +3,9 @@ import { StyleSheet, TouchableOpacity, Text, View } from "react-native";
 import BackButton from "../components/BackButton";
 import { s, vs } from "react-native-size-matters";
 import PaymentMethodCard from "../components/PaymentMethodCard";
+import PaymentList from "../components/PaymentList";
+import BankCardBox from "../components/BankCardBox";
+import AddButton from "../components/AddButton";
 
 const PaymentScreen = () => {
   return (
@@ -11,8 +14,11 @@ const PaymentScreen = () => {
         <BackButton />
         <Text style={styles.text}>Payment</Text>
       </View>
-      <PaymentMethodCard />
-      <PaymentMethodCard isSelected={true} />
+      <PaymentList />
+      <View style={{ paddingHorizontal: s(16) }}>
+        <BankCardBox />
+        <AddButton />
+      </View>
     </View>
   );
 };
@@ -21,13 +27,13 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     paddingTop: s(50),
-    paddingHorizontal: s(24),
   },
 
   textContainer: {
     flexDirection: "row",
     alignItems: "center",
     marginBottom: vs(37),
+    paddingHorizontal: s(16),
   },
   text: {
     fontSize: s(17),
