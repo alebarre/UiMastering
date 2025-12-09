@@ -10,13 +10,17 @@ const BanckCardBox = () => {
       {/* <BankCardIcon /> */}
       <LottieView
         autoPlay
-        style={{ width: s(200), height: vs(200) }}
+        loop
+        style={{
+          width: s(185),
+          height: vs(185),
+          marginBottom: vs(-30),
+          marginTop: vs(-50),
+        }}
         source={require("../assets/BankCardAnimation.json")}
       />
       <Text style={styles.bankCardText1}>No Master Card added</Text>
-      <Text style={styles.bankCardText2}>
-        You can add a masgtercard and add it for latter
-      </Text>
+      <Text style={styles.bankCardText2}>You can add it for later</Text>
     </View>
   );
 };

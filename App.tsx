@@ -4,13 +4,22 @@ import IntroScreen from "./src/screens/IntroScreen";
 import HomeScreen from "./src/screens/HomeScreen";
 import MeditationCard from "./src/components/MeditationCard";
 import PaymentScreen from "./src/screens/PaymentScreen";
+import SplashLogo from "./src/assets/SplashLogo";
+import SplashScreen from "./src/screens/SplashScreen";
+import LoginScreen from "./src/screens/LoginScreen";
+import GetStartedScreen from "./src/screens/GetStartedScreen";
+import ShoppingScreen from "./src/screens/ShoppingScreen";
 
 export default function App() {
   return (
     //<IntroScreen />
     // <ContactUsScreen />
     // <HomeScreen />
-    <PaymentScreen />
+    // <PaymentScreen />
+    // <SplashScreen />
+    // <LoginScreen />
+    // <GetStartedScreen />
+    <ShoppingScreen />
   );
 }
 
