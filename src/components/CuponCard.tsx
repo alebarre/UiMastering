@@ -20,8 +20,6 @@ const CuponCard: FC<CuponCard> = ({
 }) => {
   const [bgc, setBgc] = useState<string>("");
 
-  console.log("bgColor", bgColor);
-
   return (
     <TouchableOpacity onPress={onPress} style={styles.container}>
       {isSelected && (
@@ -45,13 +43,15 @@ const CuponCard: FC<CuponCard> = ({
 
 const styles = StyleSheet.create({
   container: {
+    justifyContent: "space-between",
+    marginTop: vs(10),
+    alignItems: "center",
     borderRadius: s(10),
-    width: s(200),
   },
   card: {
     borderRadius: s(10),
-    width: s(200),
-    height: vs(72),
+    width: s(230),
+    height: vs(100),
     justifyContent: "center",
     alignItems: "center",
   },
